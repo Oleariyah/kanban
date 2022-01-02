@@ -112,6 +112,7 @@ export default class KanbanBoard extends Component {
             placeholder="New task name"
             data-testid="create-task-input"
             onChange={this.handleValueChange}
+            value={this.state.value}
           />
           <button
             disabled={this.state.value === ""}
