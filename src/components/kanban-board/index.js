@@ -114,6 +114,7 @@ export default class KanbanBoard extends Component {
             onChange={this.handleValueChange}
           />
           <button
+            disabled={this.state.value === ""}
             type="submit"
             className="ml-30"
             data-testid="create-task-button"
