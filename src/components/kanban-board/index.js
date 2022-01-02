@@ -143,6 +143,7 @@ export default class KanbanBoard extends Component {
                             </span>
                             <div className="icons">
                               <button
+                                disabled={task.stage === 0}
                                 onClick={() =>
                                   this.handleAddToPreviousStage(task.name)
                                 }
@@ -154,6 +155,9 @@ export default class KanbanBoard extends Component {
                                 <i className="material-icons">arrow_back</i>
                               </button>
                               <button
+                                disabled={
+                                  task.stage === this.stagesNames.length - 1
+                                }
                                 onClick={() =>
                                   this.handleAddToNextStage(task.name)
                                 }
